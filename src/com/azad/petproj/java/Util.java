@@ -1,5 +1,6 @@
 package com.azad.petproj.java;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Util {
@@ -86,5 +87,13 @@ public class Util {
             }
         }
         return true;
+    }
+
+    // Get a random choice between min and max
+    public static int getRandomChoice() {
+
+        Random random = new Random();
+
+        return random.nextInt(2) + 1;
     }
 }

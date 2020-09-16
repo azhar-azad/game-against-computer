@@ -9,5 +9,22 @@ public class Controller {
         service.showGameRules();
 
         int difficultyChoice = service.getDifficultyChoice();
+
+        switch (difficultyChoice) {
+            case 1:
+                service.easyGameplay();
+                break;
+
+            case 2:
+                service.mediumGameplay();
+                break;
+
+            case 3:
+                service.hardGameplay();
+                break;
+
+            default:
+                break;
+        }
     }
 }
