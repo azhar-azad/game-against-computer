@@ -94,7 +94,30 @@ public class Service {
 
         println("\nGame Difficulty: MEDIUM\n");
 
+        int gameStatus = 0;
 
+        for (;;) {
+
+            int compChoice = Util.getCompChoice(gameStatus);
+
+            gameStatus = showGameStatus("Computer's", compChoice, gameStatus);
+            if (gameStatus >= 20) {
+                println("You SUCK !!");
+                break;
+            }
+
+            println("");
+
+            int playerChoice = getPlayerChoice();
+
+            gameStatus = showGameStatus("Your", playerChoice, gameStatus);
+            if (gameStatus >= 20) {
+                println("You WON !!");
+                break;
+            }
+
+            println("");
+        }
     }
 
     public void hardGameplay() {

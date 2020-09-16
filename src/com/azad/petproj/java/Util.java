@@ -96,4 +96,31 @@ public class Util {
 
         return random.nextInt(2) + 1;
     }
+
+    public static int getCompChoice(int gameStatus) {
+
+        int[] winChoices = {11, 14, 17, 20};
+
+        if (isPresentInArray(winChoices, gameStatus)) {
+            return 1;
+        }
+
+        for (int i: winChoices) {
+            if ((i - 1) == gameStatus)
+                return 1;
+            if ((i - 2) == gameStatus)
+                return 2;
+        }
+
+        return getRandomChoice();
+    }
+
+    private static boolean isPresentInArray(int[] array, int num) {
+        for (int i: array) {
+            if (num == i)
+                return true;
+        }
+
+        return false;
+    }
 }

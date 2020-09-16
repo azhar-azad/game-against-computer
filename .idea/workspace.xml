@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07da131e-aa93-4a23-8b5f-cdbadba4259a" name="Default" comment="" />
+    <list default="true" id="07da131e-aa93-4a23-8b5f-cdbadba4259a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/azad/petproj/java/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/azad/petproj/java/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/azad/petproj/java/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/azad/petproj/java/Util.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,28 +33,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Service.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/azad/petproj/java/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="285">
+              <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
               <folding>
-                <element signature="e#2998#2999#0" expanded="true" />
-                <element signature="e#3029#3030#0" expanded="true" />
-                <element signature="e#3066#3067#0" expanded="true" />
-                <element signature="e#3103#3104#0" expanded="true" />
-                <element signature="e#3142#3143#0" expanded="true" />
-                <element signature="e#3181#3182#0" expanded="true" />
+                <element signature="e#3065#3066#0" expanded="true" />
+                <element signature="e#3096#3097#0" expanded="true" />
+                <element signature="e#3133#3134#0" expanded="true" />
+                <element signature="e#3170#3171#0" expanded="true" />
+                <element signature="e#3209#3210#0" expanded="true" />
+                <element signature="e#3248#3249#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Util.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/azad/petproj/java/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="96" column="37" lean-forward="true" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+            <state relative-caret-position="335">
+              <caret line="101" column="44" lean-forward="true" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#900#901#0" expanded="true" />
@@ -79,8 +82,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/azad/petproj/java/Main.java" />
         <option value="$PROJECT_DIR$/src/com/azad/petproj/java/Controller.java" />
-        <option value="$PROJECT_DIR$/src/com/azad/petproj/java/Util.java" />
         <option value="$PROJECT_DIR$/src/com/azad/petproj/java/Service.java" />
+        <option value="$PROJECT_DIR$/src/com/azad/petproj/java/Util.java" />
       </list>
     </option>
   </component>
@@ -172,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600290903344</updated>
-      <workItem from="1600290905480" duration="6335000" />
+      <workItem from="1600290905480" duration="8945000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore added">
       <created>1600291659305</created>
@@ -195,11 +198,18 @@
       <option name="project" value="LOCAL" />
       <updated>1600297232067</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="difficulty feature added, EASY gameplay implemented. Closes #3 Closes #6">
+      <created>1600297270078</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600297270078</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6335000" />
+    <option name="totallyTimeSpent" value="8945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="25" width="1863" height="1055" extended-state="6" />
@@ -215,7 +225,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="right" id="Run" order="9" type="SLIDING" weight="0.6199678" />
+      <window_info anchor="right" id="Run" order="9" type="SLIDING" weight="0.5448202" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -245,7 +255,13 @@
     <MESSAGE value="gitignore added" />
     <MESSAGE value="application structure added. Closes #1" />
     <MESSAGE value="difficulty feature added, EASY gameplay implemented. Closes #3 #6" />
-    <option name="LAST_COMMIT_MESSAGE" value="difficulty feature added, EASY gameplay implemented. Closes #3 #6" />
+    <MESSAGE value="difficulty feature added, EASY gameplay implemented. Closes #3 Closes #6" />
+    <option name="LAST_COMMIT_MESSAGE" value="difficulty feature added, EASY gameplay implemented. Closes #3 Closes #6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -269,29 +285,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/azad/petproj/java/Util.java">
+    <entry file="file://$PROJECT_DIR$/src/com/azad/petproj/java/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="96" column="37" lean-forward="true" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+        <state relative-caret-position="285">
+          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3096#3097#0" expanded="true" />
+            <element signature="e#3133#3134#0" expanded="true" />
+            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#3209#3210#0" expanded="true" />
+            <element signature="e#3248#3249#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/azad/petproj/java/Service.java">
+    <entry file="file://$PROJECT_DIR$/src/com/azad/petproj/java/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="335">
+          <caret line="101" column="44" lean-forward="true" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
           <folding>
-            <element signature="e#2998#2999#0" expanded="true" />
-            <element signature="e#3029#3030#0" expanded="true" />
-            <element signature="e#3066#3067#0" expanded="true" />
-            <element signature="e#3103#3104#0" expanded="true" />
-            <element signature="e#3142#3143#0" expanded="true" />
-            <element signature="e#3181#3182#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
           </folding>
         </state>
       </provider>
