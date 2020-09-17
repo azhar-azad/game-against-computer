@@ -1,5 +1,7 @@
 package com.azad.petproj.java;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -89,7 +91,7 @@ public class Util {
         return true;
     }
 
-    // Get a random choice between min and max
+    // Get a random choice between 1 and 2
     public static int getRandomChoice() {
 
         Random random = new Random();
@@ -97,13 +99,12 @@ public class Util {
         return random.nextInt(2) + 1;
     }
 
-    public static int getCompChoice(int gameStatus) {
+    public static int getCompChoice(String difficultyLevel, int gameStatus) {
 
-        int[] winChoices = {11, 14, 17, 20};
+        if (difficultyLevel.equals("EASY"))
+            return getRandomChoice();
 
-        if (isPresentInArray(winChoices, gameStatus)) {
-            return 1;
-        }
+        List<Integer> winChoices = getWinChoiceList(difficultyLevel);
 
         for (int i: winChoices) {
             if ((i - 1) == gameStatus)
@@ -115,12 +116,19 @@ public class Util {
         return getRandomChoice();
     }
 
-    private static boolean isPresentInArray(int[] array, int num) {
-        for (int i: array) {
-            if (num == i)
-                return true;
-        }
+    private static List<Integer> getWinChoiceList(String difficultyLevel) {
 
-        return false;
+        List<Integer> winChoiceList = new ArrayList<>();
+
+        int firstItem ;
+        if (difficultyLevel.equals("MEDIUM"))
+            firstItem = 11;
+        else
+            firstItem = 2;
+
+        for (int i = firstItem; i <= 20; i += 3)
+            winChoiceList.add(i);
+
+        return winChoiceList;
     }
 }

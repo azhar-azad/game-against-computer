@@ -9,9 +9,9 @@ public class Service {
         println("GAME RULES: Single Player");
         println("## You will play against the Computer.");
         println("## Choice available for both you and the Computer is 1 or 2 and initially 'Game Status' will be 0.");
-        println("## First, the Computer will choose (1 or 2).");
-        println("## 'Game Status' will then be updated by adding the Computer choice to the previous value of 'Game Status'.");
-        println("## Then, you will choose (1 or 2).");
+        println("## First, any player (you or computer) will choose (1 or 2).");
+        println("## 'Game Status' will then be updated by adding the choice to the previous value of 'Game Status'.");
+        println("## Then, another player will choose (1 or 2).");
         println("## 'Game Status' will be updated again.");
         println("## 'Game Status' will be increasing and finally if it reaches 20, game will be over");
         println("## If your choice make the 20 then you win, otherwise, you lose");
@@ -55,73 +55,87 @@ public class Service {
         return status;
     }
 
-    public void easyGameplay() {
+    public void gameplay(String difficultyLevel) {
 
-        println("\nGame Difficulty: EASY\n");
+        println("\nGame Difficulty: " + difficultyLevel + "\n");
 
-        int gameStatus = 0;
-
-        for (;;) {
-
-            int compChoice;
-            if (gameStatus == 19)
-                compChoice = 1;
-            else
-                compChoice = Util.getRandomChoice();
-
-            gameStatus = showGameStatus("Computer's", compChoice, gameStatus);
-            if (gameStatus >= 20) {
-                println("You SUCK !!");
-                break;
-            }
-
-            println("");
-
-            int playerChoice = getPlayerChoice();
-
-            gameStatus = showGameStatus("Your", playerChoice, gameStatus);
-            if (gameStatus >= 20) {
-                println("You WON !!");
-                break;
-            }
-
-            println("");
-        }
-
-    }
-
-    public void mediumGameplay() {
-
-        println("\nGame Difficulty: MEDIUM\n");
+        char tossWinner = runCoinToss() ? 'p' : 'c';
 
         int gameStatus = 0;
 
         for (;;) {
 
-            int compChoice = Util.getCompChoice(gameStatus);
+            if (tossWinner == 'c') {
+                int compChoice = Util.getCompChoice(difficultyLevel, gameStatus);
 
-            gameStatus = showGameStatus("Computer's", compChoice, gameStatus);
-            if (gameStatus >= 20) {
-                println("You SUCK !!");
-                break;
+                gameStatus = showGameStatus("Computer's", compChoice, gameStatus);
+                if (gameStatus >= 20) {
+                    println("You've lost the game !!");
+                    break;
+                }
+                println("");
+
+                int playerChoice = getPlayerChoice();
+
+                gameStatus = showGameStatus("Your", playerChoice, gameStatus);
+                if (gameStatus >= 20) {
+                    println("You've WON !!");
+                    break;
+                }
+                println("");
             }
 
-            println("");
+            else {
 
-            int playerChoice = getPlayerChoice();
+                int playerChoice = getPlayerChoice();
 
-            gameStatus = showGameStatus("Your", playerChoice, gameStatus);
-            if (gameStatus >= 20) {
-                println("You WON !!");
-                break;
+                gameStatus = showGameStatus("Your", playerChoice, gameStatus);
+                if (gameStatus >= 20) {
+                    println("You've WON !!");
+                    break;
+                }
+                println("");
+
+                int compChoice = Util.getCompChoice(difficultyLevel, gameStatus);
+
+                gameStatus = showGameStatus("Computer's", compChoice, gameStatus);
+                if (gameStatus >= 20) {
+                    println("You've lost the game !!");
+                    break;
+                }
+                println("");
             }
-
-            println("");
         }
     }
 
-    public void hardGameplay() {
-        println("Hard");
+    public boolean runCoinToss() {
+
+        println("Coin toss is running....");
+        println("Call HEAD (press 1) or TAIL (press 2)");
+        int tossChoice;
+        do {
+            print("Enter (1 or 2): ");
+            tossChoice = Util.getIntegerInput("Negative/Non-integer input is invalid.");
+        } while (tossChoice != 1 && tossChoice != 2);
+
+        println("");
+
+        int tossResult = getCoinTossResult();
+
+        if (tossChoice == tossResult) {
+            println("You've won the toss. You will choose first.");
+            return true;
+        }
+
+        else {
+            println("You've lost the toss. Computer will choose first.");
+            return false;
+        }
+
+    }
+
+    public int getCoinTossResult() {
+        return Util.getRandomChoice();
     }
 
     public void print(String msg) {

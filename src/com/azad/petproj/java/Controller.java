@@ -12,15 +12,15 @@ public class Controller {
 
         switch (difficultyChoice) {
             case 1:
-                service.easyGameplay();
+                service.gameplay("EASY");
                 break;
 
             case 2:
-                service.mediumGameplay();
+                service.gameplay("MEDIUM");
                 break;
 
             case 3:
-                service.hardGameplay();
+                service.gameplay("HARD");
                 break;
 
             default:
